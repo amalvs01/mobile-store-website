@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>mobilemagic.com </title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="main">
+
+    <nav>
+        <div class="logo">
+          <img src="images/logo.png" >
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Phone</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Cart</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="information"> 
+      
+      <div class="overlay"></div>
+    
+      <img src="images/iphone.png" class="mobile" >
+     
+      <div id="circle">
+        <div class="feature one">
+          
+          <img src="images/camera.png">
+          <div>
+            <h1>camera</h1>
+            <p>48 MP,12 MP,12 MP</p>
+          </div>
+        </div>
+
+        <div class="feature two">
+          <img src="images/battery.png" >
+          <div>
+            <h1>Battery</h1>
+            <p>Li-Ion 3274 mAh, non-removable</p>
+          </div>
+        </div>
+
+        <div class="feature three">
+          <img src="images/screen.png" >
+          <div>
+            <h1>Display</h1>
+            <p>LTPO Super Retina XDR OLED (6.1 inches, 91.3 cm2)</p>
+          </div>
+        </div>
+
+        <div class="feature four">
+          <img src="images/processor.png">
+          <div>
+            <h1>processor</h1>
+            <p>Apple A17 Pro</p>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <div class="controls">
+      <img src="images/arrow.png" id="upBtn">
+      <h3>Features</h3>
+      <img src="images/arrow.png" id="downBtn">
+    </div>
+  </div>  
+
+  <script>
+ 
+  var circle = document.getElementById("circle");
+  var upBtn = document.getElementById("upBtn");
+  var downBtn = document.getElementById("downBtn");
+
+  var rotateValue = circle.style.transform;
+  var rotateSum;
+
+  upBtn.onclick = function()
+  { 
+    rotateSum= rotateValue + "rotate(-90deg)";
+    circle.style.transform = rotateSum;
+    rotateValue = rotateSum;
+  }
+
+  downBtn.onclick = function()
+  { 
+    rotateSum= rotateValue + "rotate(90deg)";
+    circle.style.transform = rotateSum;
+    rotateValue = rotateSum;
+  }
+
+  </script>
+
+</body>
+</html>
